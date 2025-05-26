@@ -12,7 +12,7 @@ const db = new sqlite3.Database(path.resolve(__dirname, 'shop.db'), (err) => {
 });
 
 app.use(cors({
-  origin: 'https://your-vercel-domain.vercel.app', // replace with your actual Vercel URL
+  origin: 'https://mysql-try-frontend.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
 }));
 app.use(express.json());
