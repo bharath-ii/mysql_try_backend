@@ -11,7 +11,10 @@ const db = new sqlite3.Database(path.resolve(__dirname, 'shop.db'), (err) => {
   else console.log('✅ Connected to shop.db');
 });
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://your-vercel-domain.vercel.app', // replace with your actual Vercel URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+}));
 app.use(express.json());
 
 // 🔍 Flexible search
